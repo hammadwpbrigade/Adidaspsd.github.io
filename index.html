@@ -579,21 +579,14 @@
     </script>
     <script>
         $(document).ready(function () {
-            // Update event count on page load
             updateEventCount();
-    
-            // Function to update event count
             function updateEventCount() {
-                // Select all event containers
                 var eventContainers = $('.event-container');
-    
-                // Update the count for each event container
                 eventContainers.each(function (index) {
                     $(this).find('.count').text(index + 1);
                 });
             }
     
-            // Example: Add a new event container dynamically
             $('#addEventButton').on('click', function () {
                 // Create a new event container
                 var newEventContainer = $('<div class="event-container flex">');
@@ -605,7 +598,6 @@
                     </div>
                 `);
     
-                // Append the new event container to the aside
                 $('.aside').append(newEventContainer);
     
                 // Update event count
